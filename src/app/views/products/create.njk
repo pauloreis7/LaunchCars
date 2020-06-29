@@ -1,0 +1,124 @@
+{% extends 'layout.njk' %}
+
+{% set pageId = 'create_page' %}
+
+{% block content %}
+
+    <section class="form_content">
+
+        {% include 'parts/header.njk' %}
+
+        <form action="/products" method="POST">
+
+            <div class="form_header">
+
+                <h1>Register a new <strong>Rocket</strong></h1>
+
+            </div>
+
+            <fieldset class="fields">
+
+                {% include 'products/fields.njk' %}
+
+            </fieldset>
+
+            <button type="submit" class='buttons'>Create</button>
+
+        </form>
+
+    </section>
+
+    <section class="create_view">
+
+        <article class="view_header">
+
+            <div>
+                
+                <a href="/">
+                
+                    <i class="material-icons">keyboard_arrow_left</i><span>Back to home</span>
+
+                </a>
+
+            </div>
+
+            <div class="midias">
+
+                <ul>
+
+                    <li>
+
+                        <a href="https://www.instagram.com/paulo_reis.dev/?hl=pt-br" target="_blank">Instagram</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="https://www.facebook.com/paulofulano.reis" target="_blank">Facebook</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="https://github.com/pauloreis7" target="_blank">Github</a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+        <div class="view_cards">
+
+            <ul>
+
+                <li>
+
+                    <span></span>
+
+                    <p>The best form to buy and sell in just a screen</p>
+
+                </li>
+
+                <li>
+
+                    <span></span>
+
+                    <div class="view_more">
+
+                        <div>
+
+                            <h3>Liked what saw ?</h3>
+
+                            <p>See everthigh you can</p>
+
+                        </div>
+
+                        <a href="/products">
+                        
+                            View more<i class="material-icons">arrow_right_alt</i>
+                        
+                        </a>
+
+                    </div>
+
+                </li>
+
+                <li>
+
+                    <span></span>
+
+                    <p>Best form to get the best business </p>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+{% endblock %}

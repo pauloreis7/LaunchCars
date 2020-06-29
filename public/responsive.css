@@ -28,7 +28,7 @@
         margin: 0 auto;
     }
 
-    header div.container > a {
+    #home_page header div.container > a {
         background-image: url('/assets/Logo.svg');
         background-repeat: no-repeat;
         background-size: 4rem 4rem;
@@ -58,7 +58,7 @@
         margin-bottom: 40px;
     }
 
-    #home_page .footer_midias {
+    #home_page .midias {
         width: 100%;
     }
 }
@@ -89,7 +89,7 @@
         height: 48px;
     }
 
-    #home_page .footer_midias ul {
+    #home_page .midias ul {
         width: 60%;
     }
 
