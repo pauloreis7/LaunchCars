@@ -1,0 +1,96 @@
+{% extends 'layout.njk' %}
+
+{% set pageId = "home_page" %}
+
+{% block content %}
+
+    <header>
+
+        <div class="container">
+
+            <a href="/">
+
+                LaunchCars Logo
+                
+            </a>
+
+            <nav class="primary">
+
+                <ul>
+
+                    <li>
+
+                        <a href="/products">
+                        
+                            <i class="material-icons">shopping_cart</i><span>Shop</span>  
+                        
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#">
+                            
+                            <span>Loug out</span><i class="material-icons">login</i>
+                            
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <section class="content">
+
+        <main>
+
+            <h1>Welcome to Launch Cars</h1>
+
+            <p>Your best car workspace</p>
+
+            <article class="index_buttons">
+
+                <a href="#">Login</a>
+                <a href="#">Create Account</a>
+
+            </article>
+
+        </main>
+
+        <div class="footer_midias">
+
+            <ul>
+
+                <li>
+
+                    <a href="https://www.instagram.com/paulo_reis.dev/?hl=pt-br" target="_blank">Instagram</a>
+
+                </li>
+
+                <li>
+
+                    <a href="https://www.facebook.com/paulofulano.reis" target="_blank">Facebook</a>
+
+                </li>
+
+                <li>
+
+                    <a href="https://github.com/pauloreis7" target="_blank">Github</a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    {% include 'parts/footer.njk' %}
+
+{% endblock %}

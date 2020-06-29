@@ -1,0 +1,111 @@
+@media (max-width: 900px) {
+    
+    nav.primary ul li:last-child a span {
+        display: none;
+    }
+
+    nav.primary ul li:last-child a i {
+        margin: 0;
+    }
+}
+
+@media (max-width: 738px) {
+    
+    #home_page {
+        background-position: 63vw 64vh;
+    }
+}
+
+@media (max-width: 680px) {
+
+    #home_page {
+        background-position: 60vw 64vh;
+    }
+
+    header div.container {
+        width: 80%;
+        
+        margin: 0 auto;
+    }
+
+    header div.container > a {
+        background-image: url('/assets/Logo.svg');
+        background-repeat: no-repeat;
+        background-size: 4rem 4rem;
+    }
+
+    nav.primary ul li:first-child a span {
+        display: none;
+    }
+
+    nav.primary ul li:first-child a:first-child {
+        padding: 12px 12px;
+        border-radius: 8px;
+    }
+
+    nav.primary ul li:first-child a i {
+        margin: 0;
+    }
+
+    #home_page .content {
+        align-items: center;
+
+        margin: 0 auto;
+    }
+
+    #home_page main {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    #home_page .footer_midias {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    #home_page {
+        background-position: 46vw 64vh;
+    }
+
+    #home_page main {
+        max-width: 310px;
+    }
+
+    #home_page main h1 {
+        font-size: 48px;
+    }
+
+    #home_page main p {
+        font-size: 24px;
+    }
+
+    #home_page .index_buttons {
+        height: 120px;
+    }
+
+    #home_page .index_buttons a {
+        height: 48px;
+    }
+
+    #home_page .footer_midias ul {
+        width: 60%;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    
+    #home_page {
+        background-position: 32vw 64vh;
+    }
+}

@@ -5,10 +5,12 @@
     <head>
 
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="assets/favicon_launch_cars.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href="/responsive.css" />
 
         <title>LaunchCars</title>
 
@@ -16,7 +18,15 @@
 
     <body>
 
+        <div id="{{ pageId }}">
 
+            {% block content %}
+
+                {% include 'parts/footer.njk' %}
+
+            {% endblock %}
+
+        </div>
         
     </body>
 
