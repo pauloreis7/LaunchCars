@@ -1,3 +1,5 @@
+/* RESPONSIVE HOME PAGE */
+
 @media (max-width: 900px) {
     
     nav.primary ul li:last-child a span {
@@ -107,5 +109,139 @@
     
     #home_page {
         background-position: 32vw 64vh;
+    }
+}
+
+/* RESPONSIVE CREATE PAGE */
+
+@media (max-width: 1238px) {
+    .view_cards {
+        max-width: 55%;
+    }
+
+    .create_view {
+        gap: 33px; 
+    }
+}
+
+@media (max-width: 980px) {
+    #create_page form .field_group {
+        grid-template-columns: 1fr;
+    }
+
+    .view_cards {
+        height: 100%;
+    }
+
+    .create_view {
+        gap: 56px; 
+    }
+}
+
+@media (max-width: 1050px) {
+    nav.primary ul li:last-child a span {
+        display: none;
+    }
+
+    nav.primary ul li:last-child a i {
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .view_header {
+        padding: 42px 8px 0;
+    }
+
+    .create_view .midias {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 840px) {
+    .view_cards {
+        max-width: 40%;
+        height: 100%;
+    }
+
+    .view_cards ul li {
+        height: 25%;
+    
+        padding: 22px 20px;
+    }
+
+    .view_cards ul li:nth-child(2) {
+        height: 30%;
+    }
+
+    .view_cards ul li span {
+        background-size: 55px 55px;
+    }
+
+    .view_cards ul li p, .view_more {
+        font-size: 12px;
+        line-height: 23px;
+    }
+
+    .create_view {
+        gap: 16px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .create_view div > a span {
+        display: none;
+    }
+
+    .create_view div > a i {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 720px) {
+    .create_view {
+        display: none;
+    }
+
+    #create_page header div.container {
+        margin: 0 auto;
+        padding-left: 24px;
+    }
+
+    #create_page form .field_group {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #create_page header div.container {
+        width: 100%;
+    }
+
+    #create_page div.container .primary ul {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 750px) {
+    #create_page nav.primary ul {
+        justify-content: space-evenly;
+    }
+
+    #create_page nav.primary ul li:first-child a span {
+        display: none;
+    }
+
+    #create_page nav.primary ul li:first-child a:first-child {
+        padding: 12px 12px;
+        border-radius: 8px;
+    }
+
+    #create_page nav.primary ul li:first-child a i {
+        margin: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    #create_page form .field_group {
+        grid-template-columns: 1fr;
     }
 }
