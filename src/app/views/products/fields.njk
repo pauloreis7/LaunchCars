@@ -1,8 +1,8 @@
 
 <div class="field">
     
-    <label for="car_name">Name</label>
-    <input id="car_name" name="name" value="{{ product.name }}" placeholder="Car name" />
+    <label for="name">Name</label>
+    <input id="name" name="name" value="{{ car.name }}" placeholder="Car name" />
 
 </div>
 
@@ -10,11 +10,16 @@
     
     <div class="field">
     
-        <label for="car_model">Model</label>
+        <label for="model_id">Model</label>
         
-        <select name="car_model">
+        <select name="model_id">
             <option value="">Select the car model</option>
 
+            {% for model in models %}
+
+                <option value="{{ model.id }}">{{ model.name }}</option>
+
+            {% endfor %}
 
         </select>
 
@@ -22,8 +27,8 @@
 
     <div class="field">
     
-        <label for="car_color">Color</label>
-        <input id="car_color" name="color" value="{{ product.color }}"  placeholder="Car color" />
+        <label for="color">Color</label>
+        <input id="color" name="color" value="{{ car.color }}"  placeholder="Car color" />
 
     </div>
 
@@ -31,15 +36,15 @@
 
 <div class="field">
     
-    <label for="car_price">Price</label>
-    <input id="car_price" name="price" value="{{ product.price }}" placeholder="Car price" />
+    <label for="price">Price</label>
+    <input id="price" name="price" value="{{ car.price }}" placeholder="Car price" onkeydown="Mask.apply(this, 'formatUSD')" />
 
 </div>
 
 
 <div class="field">
     
-    <label for="car_board">Board</label>
-    <input id="car_board" name="board" value="{{ product.board }}" placeholder="ABC-1234" />
+    <label for="board">Board</label>
+    <input id="board" name="board" value="{{ car.board }}" placeholder="ABC-1234" />
 
 </div>
