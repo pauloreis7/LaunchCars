@@ -35,7 +35,7 @@ body {
     display: block;
     width: 100%;
 
-    margin: 16px 0;
+    margin: 14px 0;
     padding: 12px 16px;
 
     align-self: end;
@@ -44,7 +44,7 @@ body {
     background-color: var(--primary-color);
     color: white;
     box-shadow: 2px 2px 8px -4px var(--primary-color);
-    border-radius: 8px;
+    border-radius: 4px;
     font-weight: 700;
     font-size: 24px;
     letter-spacing: 1.5px;
@@ -627,14 +627,31 @@ form select {
     font-size: 20px;
 }
 
-/* FOOTER */
+/* EDIT PAGE */
 
-#create_page footer {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.897);
+.form_buttons {
+    width: 100%;
 
-    padding: 16px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
 }
+
+.form_buttons #form_delete {
+    width: 100%;
+}
+
+.form_buttons #form_delete button {
+    background-color: var(--deletes-color);
+}
+
+.form_buttons #form_delete button:hover {
+    filter: brightness(120%);
+
+    transition: 250ms;
+}
+
+/* FOOTER */
 
 footer {
     text-align: center;

@@ -17,7 +17,8 @@
 
             {% for model in models %}
 
-                <option value="{{ model.id }}">{{ model.name }}</option>
+                <option value="{{ model.id }}" {% if car.model_id == model.id %}selected{% endif %}>
+                {{ model.name }}</option>
 
             {% endfor %}
 

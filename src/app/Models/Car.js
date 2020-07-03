@@ -15,6 +15,8 @@ module.exports = {
         RETURNING id
         `
 
+        data.price = data.price.replace(/\D/g, "")
+
         const values = [
             data.model_id,
             data.agency_id || 1,
@@ -29,5 +31,35 @@ module.exports = {
 
     find(id) {
         return db.query(`SELECT * FROM cars WHERE id = ${ id }`)
+    },
+
+    update(data) {
+        
+        const query = `
+        UPDATE cars SET
+            model_id = ($1),
+            agency_id = ($2),
+            board = ($3),
+            color = ($4),
+            price = ($5),
+            name = ($6)
+        WHERE id = ${ data.id }
+        `
+        
+        const values = [
+            data.model_id,
+            data.agency_id || 1,
+            data.board,
+            data.color,
+            data.price,
+            data.name,
+        ]
+
+        return db.query(query, values)
+    },
+
+    delete(id) {
+
+        return db.query(`DELETE FROM cars WHERE id = ${ id }`)
     }
 }

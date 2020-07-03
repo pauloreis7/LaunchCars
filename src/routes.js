@@ -16,4 +16,8 @@ routes.post("/products", cars.post)
 
 routes.get("/products/:id/edit", cars.edit)
 
+routes.put("/products", cars.put)
+
+routes.delete("/products", cars.delete)
+
 module.exports = routes

@@ -1,0 +1,50 @@
+{% extends 'layout.njk' %}
+
+{% set pageId = 'create_page' %}
+
+{% block content %}
+
+    <section class="form_content">
+
+        {% include 'parts/header.njk' %}
+
+        <form action="/products?_method=PUT" method="POST">
+
+            <div class="form_header">
+
+                <h1>Update your <strong>Rocket</strong></h1>
+
+            </div>
+
+            <fieldset class="fields">
+
+                {% include 'products/fields.njk' %}
+
+                <input type="hidden" name="id" value="{{ car.id }}">
+            
+            </fieldset>
+
+
+            <div class="form_buttons">
+
+                <button type="submit" class='buttons'>Edit</button>
+        </form>
+
+
+                <form id="form_delete" action="/products?_method=DELETE" method="POST">
+
+                    <input type="hidden" name="id" value="{{ car.id }}">
+
+                    <button type="submit" class='buttons'>Delete</button>
+
+                </form>
+                
+            </div>
+
+    </section>
+
+    {% include 'parts/cards_orange.njk' %}
+
+    {% include 'parts/confirm.njk' %}
+
+{% endblock %}
