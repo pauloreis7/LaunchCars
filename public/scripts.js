@@ -7,7 +7,6 @@ const Mask = {
             target.value = Mask[func](target.value)
 
         }, 1)
-
     },
 
     formatUSD (value) {
@@ -20,3 +19,16 @@ const Mask = {
         }).format(value/100)
     }
 }
+
+function calculate (number) {
+
+    setTimeout(function(){
+
+      let result = number * 2
+
+      console.log(result)
+
+    },1000, number)
+
+}
+calculate(40)
