@@ -46,6 +46,6 @@
 <div class="field">
     
     <label for="board">Board</label>
-    <input id="board" name="board" value="{{ car.board }}" placeholder="ABC-1234" />
+    <input id="board" name="board" value="{{ car.board }}" placeholder="ABC-1234" maxlength="14" onkeydown="Mask.apply(this, 'formatCPF')" />
 
 </div>
