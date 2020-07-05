@@ -20,15 +20,65 @@ const Mask = {
     }
 }
 
-function calculate (number) {
+//Fazendo com callbacks:
 
-    setTimeout(function(){
+// function doubleNumber(number) {
+//     return console.log(number * 2)
+//   }
+  
+// function show (number, callback) {
+    
+//     setTimeout(function () {
+        
+//         doubleNumber(number)
 
-      let result = number * 2
+//         callback()
+        
+//     }, 1000, number)
+    
+// }
 
-      console.log(result)
 
-    },1000, number)
+// show(1, function () {
+//     show(2, function () {
+//         show(3, function () {
+//             show(4, function () {
+//                 show(5, function () {
 
+//                     return console.log("Sou o 5")
+//                 })
+
+//                 console.log("Sou o 4")
+//             })
+//             console.log("Sou o 3")
+//         })
+
+//         console.log("Sou o 2")
+//     })
+// console.log("Sou o 1")
+// })
+
+// Fazendo com Promises:
+
+function calculate(number, lastResult) {
+
+    return new Promise ((resolve, reject) => {
+
+        setTimeout(function () {
+
+            mult = number * 2
+            final = mult + lastResult
+
+            console.log(final)
+            
+            resolve(final)
+            
+        }, 1000, number, lastResult)
+
+    })
 }
-calculate(40)
+
+calculate(1, 0).then((res) => { calculate(2, res)
+.then((res) => { calculate(3, res)
+.then((res) => { calculate(4, res)
+.then((res) => { calculate(5, res) }) }) })})
